@@ -83,7 +83,7 @@ const Loading = () => <div>Fancy loading container</div>;
 
 export default withRouter(
   GoogleApiWrapper({
-    apiKey: __GAPI_KEY__,
+    apiKey: process.env.__GAPI_KEY__,
     libraries: ['places', 'visualization'],
     LoadingContainer: Loading
   })(Container)
